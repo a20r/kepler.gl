@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import AnimationSpeedToggle from 'components/filters/animation-speed-toggle';
 import {Button, CenterFlexbox} from 'components/common/styled-components';
@@ -10,7 +10,7 @@ const StyledSpeedToggle = styled.div`
   flex-grow: 0;
   color: ${props => props.theme.textColor};
   position: relative;
-  margin-left: 8px;
+  margin-right: 8px;
 
   .bottom-widget__icon {
     margin-right: 6px;

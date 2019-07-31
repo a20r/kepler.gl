@@ -644,7 +644,7 @@ export const updateAnimationSpeedUpdater = (state, action) => ({
 
 export const playAnimationUpdater = (state) => {
   const timeRange = state.animationConfig.domain[1] - state.animationConfig.domain[0]
-  //min base speed of 1 but scale down the range is time range is big to cap at reasonable animation duration
+  // min base speed of 1 but scale down the range is time range is big to cap at reasonable animation duration
   const baseSpeed = Math.max(Math.floor(timeRange / 500),1)
   return {
     ...state,
@@ -1353,9 +1353,7 @@ function closeSpecificMapAtIndex(state, action) {
  */
 export const loadFilesUpdater = (state, action) => {
   const {files} = action;
-
   const filesToLoad = files.map(fileBlob => processFileToLoad(fileBlob));
-
   // reader -> parser -> augment -> receiveVisData
   const loadFileTasks = [
     Task.all(filesToLoad.map(LOAD_FILE_TASK)).bimap(
